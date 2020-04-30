@@ -41,3 +41,14 @@
   width: 5rem;
   height: 5rem;
 }
+
+.container {
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}

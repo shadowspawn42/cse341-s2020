@@ -13,6 +13,29 @@
   </div>
 </div>
 <div class="container">
+    <form action="/ta02/addUser" method="POST">
+      <label for="title">Name</label>
+      <input type="text" name="name" id="name">
+      <button>Submit Name</button>
+    </form>
+    <% if(names.length > 0) {%>
+      <form action="/ta02/removeUser" method="POST">
+        <label for="title">Remove Name</label>
+        <input type="text" name="name" id="name">
+        <button>Remove Name</button>
+      </form>
+    <% } %>
+    <% if(names.length > 0) {%>
+      <div class="grid">
+        <ul>
+          <% for(let users of names) { %>
+              <li><%= users.name%></li>
+          <% } %>
+        </ul>
+      </div>
+  <% } else { %>
+      <h1>No Users Found</h1>
+  <% } %>
   
 </div>
 
