@@ -6,7 +6,7 @@ const router = express.Router();
 const users = [];
 
 router.get('/',(req, res, next) => {
-    res.render('pages/ta02', { 
+    res.render('pages/teamActivities/ta02', { 
         title: 'Team Activity 02', 
         path: '/ta02', // For pug, EJS 
         activeTA03: true, // For HBS
@@ -17,7 +17,7 @@ router.get('/',(req, res, next) => {
 
 router.post('/addUser', (req, res, next) => {
     users.push({name: req.body.name});
-    res.render('pages/ta02', { 
+    res.render('pages/teamActivities/ta02', { 
         title: 'Team Activity 02', 
         path: '/ta02', // For pug, EJS 
         activeTA03: true, // For HBS
@@ -33,7 +33,7 @@ router.post('/removeUser', (req, res, next) => {
             users.splice(i, 1);
         }
     };
-    res.render('pages/ta02', { 
+    res.render('/pages/teamActivities/ta02', { 
         title: 'Team Activity 02', 
         path: '/ta02', // For pug, EJS 
         activeTA03: true, // For HBS

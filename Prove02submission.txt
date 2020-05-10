@@ -1,0 +1,39 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+https://lit-journey-32881.herokuapp.com/
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/shadowspawn42/cse341-s2020
+
+3. Briefly list and describe the elements of the application that are functioning.
+Everything is functioning as it should be. I can enter in the name and summary of a book
+and click on another button to display all of the books that I have submitted.
+I also added a button to clear all of the fields and book from the server.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Like I said above, everything is working.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+How to use EJS for templating. I didn't use it for much other than the header and
+navigation parts of the page but I realized just how powerful it can be. And I am
+looking forward to seeing all of the things I can do with EJS.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+I might make the assignment a little bit clearer and I might add a couple more 
+requirements. Other then that I really like this weeks assignments.
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+Again I didn't just do a bare bones assignment. I probably could have done more with
+the CSS but it looks good and it functions as it is suppose too. I also added a couple
+of buttons that can be useful in navigating back and forth as well as clearing what
+books have been submitted to the server.
