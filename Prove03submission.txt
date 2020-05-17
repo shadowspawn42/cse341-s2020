@@ -1,0 +1,38 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+https://git.heroku.com/lit-journey-32881.git
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/shadowspawn42/cse341-s2020
+
+3. Briefly list and describe the elements of the application that are functioning.
+Everything for the assignment is working. I read in from a JSON file, and I display
+the information in it. I also made the project more fitting for MVC. 
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Nothing from the assignment isn't working, but I did want to add the ability to
+add new products to the file and I ran into a problem with that.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+Totally unrelated to the assignment, but I didn't realize the market share that 
+selling organs has on the black market. Over a billion dollars each year. 
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+With the videos that were posted I think evetything was clear and I wouldn't change
+anything.
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+Each week I try to do the assignment in my own way, I chose something that I find 
+intersting. Explore that subject and wrap the assignment around that. I spent time
+trying to also get something to work that wasn't part of the assignment. Though it
+isn't working now, the structure is there for me to finish later. 

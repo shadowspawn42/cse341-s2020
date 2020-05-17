@@ -1,0 +1,26 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+    </head>
+
+    <body>
+        <% include ../../../../includes/nav.ejs %>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= product.title %></h1>
+            <hr>
+            <div class="image">
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            </div>
+            <div style="max-width: 60rem; margin-right: auto; margin-left: auto;">
+                <h2>$<%= product.price %></h2>
+                <h3>Publisher: <%= product.publisher %></h3>
+                <h3>Developer: <%= product.developer %></h3>
+                <h4>ESRB Rating: <%= product.esrb %></h3>
+                <p><%= product.description %></p>
+                <%- include('../includes/add-to-cart.ejs') %>
+            </div>
+        </main>
+        <%- include('../includes/end.ejs') %>
