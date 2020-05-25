@@ -17,8 +17,20 @@ const path = require('path');
 const mongoose = require("mongoose");
 const User = require("./routes/proveRoutes/prove04/models/user");
 const PORT = process.env.PORT || 5000 // So we can run on heroku || (OR) localhost:5000
+const session = require("express-session");
+const MongoDBStore = require("connect-mongodb-session")(session);
+const csrf = require("csurf");
+const flash = require("connect-flash");
+
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Mitchell:LeaderShip2012@cluster0-z1b1b.mongodb.net/prove05?retryWrites=true&w=majority";
 
 const app = express();
+
+const store = new MongoDBStore({
+  uri: MONGODB_URL,
+  collection: "sessions"
+});
+const csrfProtection = csrf();
 
 const cors = require('cors') // Place this with other requires (like 'path' and 'express')
 
@@ -36,7 +48,7 @@ const options = {
     family: 4
 };
 
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Mitchell:LeaderShip2012@cluster0-z1b1b.mongodb.net/shop?retryWrites=true&w=majority";
+
                         
 
 // Route setup. You can implement more in the future!
@@ -52,14 +64,28 @@ const routes = require('./routes');
 
 app.use(bodyParser({extended: false}));
 
+app.use(session({secret: "my secret", resave: false, saveUninitialized: false, store: store}));
+
+app.use(csrfProtection);
+app.use(flash());
+
 app.use((req, res, next) => {
-   User.findById("5ec189d987a9764c2c211b4a")
-     .then(user => {
-       req.user = user;
-       next();
-     })
-     .catch(err => console.log(err));
- });
+  if(!req.session.user){
+    return next();
+  }
+  User.findById(req.session.user._id)
+    .then(user => {
+      req.user = user;
+      next();
+    })
+    .catch(err => console.log(err));
+});
+
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
@@ -79,18 +105,6 @@ app.use(express.static(path.join(__dirname, 'public')))
     MONGODB_URL, options
   )
   .then(result => {
-   User.findOne().then(user => {
-    if(!user){
-      const user = new User({
-        name: "Lucyan",
-        email: "mitchell@salyards.net",
-        cart: {
-          items: []
-        }
-      });
-      user.save();
-    }
-  });
     app.listen(PORT);
   })
   .catch(err => {

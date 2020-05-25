@@ -10,13 +10,14 @@
         <% include ../../../../includes/nav.ejs %>
         <%- include('../includes/navigation.ejs') %>
         <main>
-            <% if (products.length > 0) { %>
+            <% if (products.length > 0) { var totalPrice = 0; %>
                 <ul class="cart__item-list">
-                    <% products.forEach(p => { %>
+                    <% products.forEach(p => { totalPrice += totalPrice + (p.quantity * p.productId.price) %>
                         <li class="cart__item">
                             <h1><%= p.productId.title %></h1>
                             <h2>Quantity: <%= p.quantity %></h2>
                             <form action="/proveAssignments/prove04/cart-delete-item" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                 <input type="hidden" value="<%= p.productId._id %>" name="productId">
                                 <button class="btn danger" type="submit">Delete</button>
                             </form>
@@ -25,7 +26,9 @@
                 </ul>
                 <hr>
                 <div class="centered">
+                    <h3>Total Price of Cart: <%= totalPrice %></h3>
                     <form action="/proveAssignments/prove04/create-order" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <button type="submit" class="btn">Order Now!</button>
                     </form>
                 </div>

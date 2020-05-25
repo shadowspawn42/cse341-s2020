@@ -13,13 +13,14 @@
                 <h1>Nothing there!</h1>
             <% } else { %>
                 <ul style="list-style-type: none;">
-                    <% orders.forEach(order => { %>
+                    <% orders.forEach(order => { var totalPrice = 0; %>
                         <li>
                             <h1>Order # <%= order._id %></h1>
                             <ul>
-                                <% order.products.forEach(p => { %>
+                                <% order.products.forEach(p => { totalPrice += totalPrice + (p.quantity * p.product.price); %>
                                     <li><%= p.product.title %> (<%= p.quantity %>)</li>
                                 <% }); %>
+                                <li>Total price: <%= totalPrice %> </li>
                             </ul>
                         </li>
                     <% }); %>

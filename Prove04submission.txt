@@ -1,0 +1,39 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+https://lit-journey-32881.herokuapp.com/
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/shadowspawn42/cse341-s2020.git
+
+3. Briefly list and describe the elements of the application that are functioning.
+In the end I got everything to work. Though it did take a lot longer then I thought
+it would. I can Create, Read, Update, and Delete.  
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Everything works.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I found it so cool that once you have a schema in place it is so easy to add or change
+elements for your database. I started with something simple and then I was easily able
+to add more information to what was being stored.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+Nothing really comes to mind. I like everything that we had to do this week.
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I feel that even though I was a little late in turing in the assignment I went 
+above and beyond to figure out what the error was, how to fix it and then still
+finish the assignment. I could have maybe planned for more time but honestly the 
+assignment isn't that difficult, but that is neither here nor there. I again found
+things that I have interested in and made the assignment around that. And as always
+I throw in an interesting fact relating to the subject matter.

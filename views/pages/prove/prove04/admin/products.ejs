@@ -34,6 +34,7 @@
                                 <div class="card__actions">
                                     <a href="/proveAssignments/prove04/admin/edit-product/<%= product._id %>?edit=true" class="btn">Edit</a>
                                     <form action="/proveAssignments/prove04/admin/delete-product" method="POST">
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                         <input type="hidden" value="<%= product._id %>" name="productId">
                                         <button class="btn" type="submit">Delete</button>
                                     </form>
