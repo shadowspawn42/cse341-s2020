@@ -15,5 +15,9 @@ routes.use('/teamActivites', teamRoutes)
         // 404 page
         res.render('pages/404', {title: '404 - Page Not Found', path: req.url})
       })
+    .use((error, req, res, next) => {
+        // 500 page
+        res.render('pages/500', {title: '500 - Some Error Happened', path: req.url})
+      })
 
 module.exports = routes;

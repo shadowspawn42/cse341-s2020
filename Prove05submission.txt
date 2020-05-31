@@ -2,16 +2,26 @@ After completing the assignment, be sure to push to Github and Heroku.
 Please answer the questions in this text file and submit it to I-Learn.
 
 1. Copy and paste the URL for your web application (e.g., Heroku):
+https://lit-journey-32881.herokuapp.com
 
 2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/shadowspawn42/cse341-s2020
 
 3. Briefly list and describe the elements of the application that are functioning. 
+Everything is working according to the assignment. You can login and logout. 
+You see only the things that you should see. So on, so on.
 
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Everything works.
 
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
+It's kind of stupid, but the Holy Ghost know how to code. I was having some problems
+and I was really not seeing where it was. So, I prayed and shortly after praying the 
+Holy Ghost was like look at this spot, something is wrong here. I fixed and it all 
+worked. 
 
 6. If you could change this assignment to be more effective or helpful, what would you change?
+I have nothing to say about changing anything. I think it is all really good right now.
 
 7. Please select the category you feel best describes your assignment:
    1 - Some attempt was made
@@ -19,5 +29,8 @@ Please answer the questions in this text file and submit it to I-Learn.
    3 - Slightly deficient, but still mostly adequate
    4 - Meets requirements
    5 - Shows creativity and excels above and beyond requirements
+5
 
 8. Provide a brief justification (1-2 sentences) for selecting that category.
+I got the assignment done and then I went to add some comforts in the cart and order pages.
+I also took the time to add csrf tokens to the webpage so make it more secure.

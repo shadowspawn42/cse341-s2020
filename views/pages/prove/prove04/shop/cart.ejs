@@ -12,7 +12,7 @@
         <main>
             <% if (products.length > 0) { var totalPrice = 0; %>
                 <ul class="cart__item-list">
-                    <% products.forEach(p => { totalPrice += totalPrice + (p.quantity * p.productId.price) %>
+                    <% products.forEach(p => { totalPrice += (p.quantity * p.productId.price) %>
                         <li class="cart__item">
                             <h1><%= p.productId.title %></h1>
                             <h2>Quantity: <%= p.quantity %></h2>

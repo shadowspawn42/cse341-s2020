@@ -35,6 +35,9 @@ const productSchema = new Schema({
   esrb: {
     type: String,
     required: true
+  },
+  stock: {
+    type: Boolean
   }
 });
 

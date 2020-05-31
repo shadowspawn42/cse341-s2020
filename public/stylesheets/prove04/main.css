@@ -244,3 +244,7 @@ form {
   border-color: red;
   background-color: rgb(255, 176, 176);
 }
+
+.invalid {
+  border-color: red;
+}

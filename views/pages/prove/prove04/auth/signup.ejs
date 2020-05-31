@@ -13,18 +13,21 @@
    <%- include('../includes/navigation.ejs') %>
 
     <main>
+        <% if(errorMessage) { %>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %>
         <form class="login-form text-center" action="/proveAssignments/prove04/signup" method="POST">
             <div>
                 <label for="email">E-Mail</label><br>
-                <input type="email" name="email" id="email">
+                <input class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>" type="email" name="email" id="email" value="<%= oldInput.email %>">
             </div>
             <div>
                 <label for="password">Password</label><br>
-                <input type="password" name="password" id="password">
+                <input class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>" type="password" name="password" id="password" value="<%= oldInput.password %>">
             </div>
             <div>
                 <label for="confirmPassword">Confirm Password</label><br>
-                <input type="password" name="confirmPassword" id="confirmPassword">
+                <input class="<%= validationErrors.find(e => e.param === 'confirmPassword') ? 'invalid' : '' %>" type="password" name="confirmPassword" id="confirmPassword" value="<%= oldInput.confirmPassword %>">
             </div><br>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <button class="btn product-form" type="submit">Sign Up</button>

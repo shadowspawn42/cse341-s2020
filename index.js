@@ -22,7 +22,7 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const csrf = require("csurf");
 const flash = require("connect-flash");
 
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Mitchell:LeaderShip2012@cluster0-z1b1b.mongodb.net/prove05?retryWrites=true&w=majority";
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Mitchell:LeaderShip2012@cluster0-z1b1b.mongodb.net/prove06?retryWrites=true&w=majority";
 
 const app = express();
 
@@ -75,10 +75,15 @@ app.use((req, res, next) => {
   }
   User.findById(req.session.user._id)
     .then(user => {
+      if (!user){
+        return next();
+      }
       req.user = user;
       next();
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      throw new Error(err);
+    });
 });
 
 app.use((req, res, next) => {

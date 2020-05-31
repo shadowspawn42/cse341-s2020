@@ -13,23 +13,16 @@
    <%- include('../includes/navigation.ejs') %>
 
     <main>
-        <% if(errorMessage) { %>
+        <% if (errorMessage) { %>
             <div class="user-message user-message--error"><%= errorMessage %></div>
         <% } %>
-        <form class="text-center login-form" action="/proveAssignments/prove04/login" method="POST">
+        <form class="text-center login-form" action="/proveAssignments/prove04/reset" method="POST">
             <div>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" value="<%= oldInput.email %>">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email">
             </div>
-            <div>
-                <label for="password">Password</label><br>
-                <input type="password" name="password" id="password" value="<%= oldInput.password %>">
-            </div><br>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button class="btn product-form" type="submit">Login</button>
+            <button class="btn product-form" type="submit">Reset Password</button>
         </form>
-        <div class="centered">
-            <a href="/proveAssignments/prove04/reset">Reset Password</a>
-        </div>
     </main>
 <%- include('../includes/end.ejs') %>
